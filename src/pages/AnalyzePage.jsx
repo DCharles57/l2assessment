@@ -20,9 +20,14 @@ function AnalyzePage() {
 
   const handleAnalyze = async () => {
     if (!message.trim()) {
-      alert('Please enter a message to analyze')
-      return
-    }
+    alert("Please enter a message to analyze.");
+    return;
+}
+
+if (message.trim().length < 10) {
+    alert("Please enter a more detailed customer support message.");
+    return;
+}
 
     setIsLoading(true)
     setResults(null)
